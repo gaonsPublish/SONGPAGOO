@@ -1,0 +1,47 @@
+<div class="main_slide_wrap">
+	<div class="main_slide">
+		<div>
+			<img src="/images/main/main_slide_img.jpg" alt="">
+			<div id="slide_contents">
+				<h1>건강한 영유아, 신뢰받는 어린이집<br>행복한 가정, 함께하는 지역사회</h1>
+				<h3>영유아의 미래를 위해 신뢰받는 어린이집과<br>행복한 가정을 위한 육아지원 전문기관입니다.</h3>
+				<ul id="icon_wrap">
+					<li>
+						<a href="#void">
+						<img src="/images/main/icon1.png" alt="">
+						<p>센터안내</p>
+						</a>
+					</li>
+					<li>
+						<a href="#void">
+						<img src="/images/main/icon2.png" alt="">
+						<p>교육신청</p>
+						</a>
+					</li>
+					<li>
+						<a href="#void">
+						<img src="/images/main/icon3.png" alt="">
+						<p>부모교육</p>
+						</a>
+					</li>
+					<li>
+						<a href="#void">
+						<img src="/images/main/icon4.png" alt="">
+						<p>상담예약</p>
+						</a>
+					</li>
+					<li>	
+						<a href="#void">
+						<img src="/images/main/icon5.png" alt=""> 
+						<p>행사일정</p>
+						</a>
+					</li>
+				</ul>
+				
+			</div><!-- slide1_contents -->
+
+		</div>
+		
+	</div><!--slide  -->
+</div><!--slide_wrap  -->
+

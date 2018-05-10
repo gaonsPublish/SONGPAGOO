@@ -1,0 +1,126 @@
+$(document).ready(function(){
+
+//	gnb 
+	$('#gnb>li').mouseenter(function(){
+		$('#gnb ul, #gnb_img').stop().slideDown(450);
+	});
+	$('#gnb>li').mouseleave(function(){
+		$('#gnb ul, #gnb_img').stop().slideUp(350);
+	});
+	
+	$('#gnb>li').mouseenter(function(){
+		$(this).children('ul').css('background-color','#e7eff6');
+	});
+	$('#gnb>li').mouseleave(function(){
+		$(this).children('ul').css('background-color','#f7f6f5');
+	});
+
+
+//  검색하러가기 버튼
+	$('#second_search button img:first-child').mouseenter(function(){
+		$('#second_search button img:last-child').css('opacity','1');
+		$('#second_search button img:first-child').css('opacity','0');
+	});
+	$('#second_search button img:last-child').mouseleave(function(){
+		$('#second_search button img:first-child').css('opacity','1');
+		$('#second_search button img:last-child').css('opacity','0');
+	});
+
+//	side_menu 
+	$("#gooey-v").gooeymenu({
+		bgColor: "#0172b0",
+		contentColor: "white",
+		style: "vertical",
+		horizontal: {
+			menuItemPosition: "glue"
+		},
+		vertical: {
+			menuItemPosition: "spaced",
+			direction: "up"
+		},
+		circle: {
+			radius: 90
+		},
+		margin: "medium",
+		size: 70,
+		bounce: true,
+		bounceLength: "small",
+		transitionStep: 100,
+		hover: "background:#4487ab;",
+		open: function() {
+			$(this).find(".gooey-menu-item").css("width","89px");
+			$(this).find(".gooey-menu-item").css("height","89px");
+			$(this).find(".gooey-menu-item").css("margin-left","-8px");
+			$('.box').css('display','table');	
+			/*$(this).find(".gooey-menu-item").hover(function(){$(".gooey-menu-item").addClass("add_bggradient");});*/
+		},
+		close: function() {
+			$(this).find(".gooey-menu-item").css("width","70px");
+			$(this).find(".gooey-menu-item").css("height","70px");
+			$(this).find(".gooey-menu-item").css("margin-left","0px");
+			$(this).find(".gooey-menu-item").removeClass("add_bggradient");
+			$('.box').css('display','none');
+		}
+	});
+
+//	$('#gnb>li').hover(
+//		function(){
+//			clearTimeout($.data('#gnb ul,#gnb_img_wrap', 'timer'));
+//			$('#gnb ul, #gnb_img_wrap').stop(true, true).slideDown(450);
+//		},
+//		function(){
+//			$.data('#gnb ul,#gnb_img_wrap', 'timer', setTimeout($.proxy(function(){
+//				$('#gnb ul,#gnb_img_wrap').stop(true, true).slideUp(200);
+//			}, '#gnb ul,#gnb_img_wrap'), 100));
+//		}
+//	);
+
+
+
+	// var gnbs = ['aaa0', 'bbb0', 'ccc0', 'ddd0', 'eee0', 'fff0', 'ggg0', 'hhh0'];
+	// $.each(gnbs, function(index, value) {
+	// 	if($('body').hasClass(value)){
+	// 		$(function(){
+	// 			$('#gnb>li:eq('+index+')').addClass('on');
+	// 		});
+	// 	}
+	// });
+
+	// var page_url=location.href.toLowerCase();
+	// $('#lnb li a').each(function() {
+	// 	if (page_url.indexOf(this.href.toLowerCase()) > -1) {
+	// 		$('#lnb li.on').removeClass('on');
+	// 		$(this).parent().addClass('on');
+	// 	}
+	// });
+	// $('#lnb li.on').parents().each(function() {
+	// 	if ($(this).is('li')){
+	// 		$(this).addClass('on');
+	// 	}
+	// });
+
+	// var lnbs = ['[class$=01]', '[class$=02]', '[class$=03]', '[class$=04]', '[class$=05]', '[class$=06]', '[class$=07]', '[class$=08]', '[class$=09]', '[class$=10]'];
+	// $.each(lnbs, function(index, value) {
+	// 	if($('body').is(value)){
+	// 		$(function(){
+	// 			$('#lnb>ul>li:eq('+index+')>a').addClass('on');
+	// 		});
+	// 	}
+	// });
+
+	var triggerBookmark = $('.add_bookmark');
+	triggerBookmark.click(function() {
+		if (window.sidebar && window.sidebar.addPanel) { // Firefox <23
+			window.sidebar.addPanel(document.title,window.location.href,'');
+		} else if(window.external && ('AddFavorite' in window.external)) { // Internet Explorer
+			window.external.AddFavorite(location.href,document.title);
+		} else if(window.opera && window.print || window.sidebar && ! (window.sidebar instanceof Node)) { // Opera <15 and Firefox >23
+			triggerBookmark.attr('rel', 'sidebar').attr('title', document.title);
+			return true;
+		} else { // other browsers (WebKit)
+			alert((navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'Ctrl') + '+D 키를 누르시면 즐겨찾기에 추가하실 수 있습니다.');
+		}
+		return false;
+	});
+
+});

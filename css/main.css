@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+
+.main_slide_wrap {position:relative;}
+.main_slide{width:1910px;left:50%;margin-left:-960px;position:relative;/*border-bottom:1px solid #ebebeb;*/}
+.main_slide .slick-dots {text-align:center;bottom:32px;}
+.main_slide .slick-dots li{margin:0 10px;}
+.main_slide .slick-dots li button{width:12px;height:12px;opacity:1;background:url('/images/misc/pager_off.png') 0 0 no-repeat;}
+.main_slide .slick-dots li.slick-active button{width:12px;height:12px;background:url('/images/misc/pager_on.png') 0 0 no-repeat;}
+
+.main_slide .slick-prev{left:409px;width:50px;height:87px;background:url('/images/misc/btn_prev.png') 0 0 no-repeat;}
+.main_slide .slick-next{right:409px;width:50px;height:87px;background:url('/images/misc/btn_next.png') 0 0 no-repeat;}
+
+/*slide*/
+#slide_contents {position: absolute; width: 1110px; height:549px; z-index: 999; right: 0; left: 0;  bottom: 0; top: 0; margin: 0 auto; }
+
+#slide_contents h1 { width:500px; margin-top: 100px; color: #000; font-size: 35px; font-weight:900; }
+#slide_contents h3 { width:400px; margin-top: 35px;color: #4a4a4a;  font-size:19px; } 
+
+#slide_contents #icon_wrap { width: 540px; height: 120px;  margin-top: 60px;}
+#slide_contents #icon_wrap li { display: inline-block; padding-right:15px; cursor:pointer;}
+#slide_contents #icon_wrap li p { margin-top: 10px; text-align: center;  font-size:17px; color:#000;}
+#slide_contents #icon_wrap li a img { transition:all 400ms ease-in-out;}
+#slide_contents #icon_wrap li a:hover img {transform:scale(1.2);transition:all 400ms ease-in-out;}
+
+
+/* container */
+#container {width:1110px;position:relative; top:0; bottom:0; left:0; right:0; margin:0 auto;}
+
+.container_top_wrap { position:relative;height:400px; vertical-align:top;  padding:30px 0 0px 0; }
+
+#container_top { height:380px; }
+/*yang 보육컨설팅*/
+#first_box { width:277px; float:left;  }
+#first_box>ul>li { width:95%; height:118px; margin-bottom:5px; margin-left:7px;}
+.first_box_content { background-color:#fff; position:relative; border:1px solid #afafaf;}
+.first_box_content p { font-size:14px; margin:15px 0 0 20px; font-size:bold;}
+.first_box_content h3>img { position:absolute; left:20px; top:43px;}
+.first_box_content h5 { width:80px; height:25px; margin:40px 0 0 20px;text-align:center; line-height:25px;background-color:#ebebeb; 
+						border:1px solid #c5c5c5;font-size:13px; }
+.first_box_content h5 a { display:block; width:100%; height:100%;}
+.first_box_content h5:hover { background-color:#f76300;}
+.first_box_content h5 a:hover { color:#fff;}
+.first_box_content img { position:absolute; bottom:-3px; right:10px;}
+
+/*yang 어린이집 검색*/
+#second_box { width:277px; float:left; }
+#second_box #search_wrap { width:95%; height:367px; text-align:center; margin-left:7px; background-color:#edf3f7; border:1px solid #afafaf; position:relative;} 
+#search_wrap img:nth-child(1) { margin-top:35px; }
+#search_wrap h3 { margin-top:15px; font-size:25px; } 
+#search_wrap h3 span { color:#1e56a2;}
+#search_wrap p { margin-top:10px; font-size:15px; } 
+#second_search { position:relative; width:220px; height:43px; top:15px; bottom:0; right:0; left:0; margin:0 auto;}
+#second_search img:first-child { position:absolute; top:-35px; left:0; }
+#second_search img:last-child { position:absolute; top:0px; left:0; display:none;}
+
+
+/*yang 장애아 지원사업*/
+#third_box { width:277px; float:left; }
+#heart { position:relative; width:95%; height:367px; margin-left:7px; border:1px solid #afafaf; background-color:#FFF; }
+#heart img { width:235px; position:absolute; top:30px; bottom:0; left:0; right:0; margin:0 auto; }
+#third_box_btn { position:absolute; width:235px; display:block; top:185px; left:0; bottom:0; right:0; margin:0 auto;}
+#third_box_btn button { width:235px; height:43px; background-color:#FFF; line-height:43px;border:1px solid #888; margin-bottom:8px; font-size:16px; color:#000;} 
+#third_box_btn button:hover { background-color:#0172b0; color:#FFF;}
+
+/*yang 마지막 박스*/
+#last_box { width:277px; float:left; }
+.last_box_content { position:relative; width:95%; height:180px; margin-left:7px; margin-bottom:6px; border:1px solid #afafaf; background-color:#FFF; }
+.last_box_content h3 { font-size:23px; margin:15px 0 0 20px; font-style:bold;}
+.last_box_content h3 span { color:#1e56a2; }
+.last_box_content p { font-size:16px; color:#4a4a4a; margin:10px 0 0 20px; }
+.last_box_content img { position:absolute; bottom:20px; right:15px;}
+
+/*container_middle*/
+.container_middle_wrap { position:relative; width:100%; height:260px;background-color:#f0f0f0; vertical-align:top; }
+#container_middle { width:1110px; height:260px; position:absolute; right:0; top:0; left:0; bottom:0; margin:0 auto; }
+.notice { width:50%; height:260px; float:left; position:relative; }
+.notice li { margin-left:35px; color:#000; font-size:14px; margin-bottom:10px; position:relative; }
+.notice li a, .post li a {width:315px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; display:block;  }
+.notice li a:hover, .post li a:hover { text-decoration:underline;}
+.notice li:first-child, .post li:first-child { font-size:23px; font-style:bold; margin-bottom:20px; margin-top:20px;}
+.post { width:50%; height:260px; float:left;position:relative; } 
+.notice li span { margin-left:120px; color:#111; font-weight:100; display:block; position:absolute; right:0; top:0;} 
+.post li span { color:#111; font-weight:100; display:block; position:absolute; right:0; top:0;}
+.post li { width:480px;margin-left:45px; color:#000;font-size:14px; margin-bottom:10px; position:relative;  }
+.notice li div { position:absolute;width:23px; height:23px; border:1px solid #000; 
+			right:12px; top:0px; text-align:center; line-height:20px;}
+.post li div { position:absolute;width:23px; height:23px; border:1px solid #000; 
+			right:0px; top:0px; text-align:center; line-height:20px;}
+
+/*container_bottom*/
+.container_bottom_wrap { position:relative; height:150px; vertical-align:top;background-color:#FFF; }
+#container_bottom { position:absolute; width:1110px; height:150px; top:0; bottom:0; left:0; right:0; margin:0 auto; }
+.container_bottom_btn { width:211px; height:95px;margin-right:10px; margin-top:30px; display:inline-block;  border-radius:10px; cursor:pointer;}
+.container_bottom_btn:first-child { background-color:#6c1d28;}
+.container_bottom_btn:nth-child(2) { background-color:#ffc53b;}
+.container_bottom_btn:nth-child(3) { background-color:#f1e4ca;}
+.container_bottom_btn:nth-child(4) { background-color:#57c7cc;}
+.container_bottom_btn:last-child { margin-right:0; background-color:#fd6433;}
+
+.container_bottom_btn img { margin-top:23px; margin-left:20px; float:left; }
+.container_bottom_btn .text {width:120px; height:50px; float:left; margin-left:20px; margin-top:23px;}
+#dv1 p, #dv4 p, #dv5 p { color:#fff; font-size:18px; font-weight:500;}
+#dv2 p, #dv3 p { color:#333; font-size:18px; font-weight:500; }
+#dv1 h3, #dv4 h3, #dv5 h3 { color:#fff; font-size:14px; font-weight:100; }
+#dv2 h3, #dv3 h3 { color:#000; font-size:14px; font-weight:300; }
+
+.container_bottom_wrap #top_btn { position:absolute; right:280px; bottom:40px; cursor:pointer;}

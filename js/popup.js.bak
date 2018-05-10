@@ -1,0 +1,22 @@
+
+<script type="text/javascript">
+  function setCookie( name, value, expirehours ) {
+    var todayDate = new Date();
+    todayDate.setHours( todayDate.getHours() + expirehours );
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+  }
+  function closeWin() {
+    document.getElementById("#popup").style.height = "0";
+  }
+  function todaycloseWin() {
+    setCookie( "ncookie", "done" , 24 );
+    document.getElementById("#popup").style.height = "0";
+  }
+  cookiedata = document.cookie;
+  
+  if ( cookiedata.indexOf("ncookie=done") < 0 ){
+    document.getElementById("#popup").style.height = "96";
+  } else {
+    document.getElementById("#popup").style.height = "0";
+  }
+</script>
